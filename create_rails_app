@@ -1,0 +1,3 @@
+#!/bin/csh -f
+
+rails _5.1.3_ new bevtracker -f -d mysql --skip-yarn --skip-action-mailer --skip-spring --skip-listen --skip-coffee -T --skip-system-test
