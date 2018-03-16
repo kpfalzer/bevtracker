@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vintage:</strong>
+  <%= @beverage.vintage %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @beverage.name %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @beverage.rating %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @beverage.link %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @beverage.comments %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @beverage.quantity %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @beverage.price %>
+</p>
+
+<%= link_to 'Edit', edit_beverage_path(@beverage) %> |
+<%= link_to 'Back', beverages_path %>

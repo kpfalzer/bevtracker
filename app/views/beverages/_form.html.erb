@@ -1,0 +1,52 @@
+<%= form_with(model: beverage, local: true) do |form| %>
+  <% if beverage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(beverage.errors.count, "error") %> prohibited this beverage from being saved:</h2>
+
+      <ul>
+      <% beverage.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :vintage %>
+    <%= form.number_field :vintage, id: :beverage_vintage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_area :name, id: :beverage_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rating %>
+    <%= form.number_field :rating, id: :beverage_rating %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link %>
+    <%= form.text_area :link, id: :beverage_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comments %>
+    <%= form.text_area :comments, id: :beverage_comments %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity, id: :beverage_quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :beverage_price %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

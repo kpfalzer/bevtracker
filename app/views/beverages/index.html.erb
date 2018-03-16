@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Beverages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vintage</th>
+      <th>Name</th>
+      <th>Rating</th>
+      <th>Link</th>
+      <th>Comments</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @beverages.each do |beverage| %>
+      <tr>
+        <td><%= beverage.vintage %></td>
+        <td><%= beverage.name %></td>
+        <td><%= beverage.rating %></td>
+        <td><%= beverage.link %></td>
+        <td><%= beverage.comments %></td>
+        <td><%= beverage.quantity %></td>
+        <td><%= beverage.price %></td>
+        <td><%= link_to 'Show', beverage %></td>
+        <td><%= link_to 'Edit', edit_beverage_path(beverage) %></td>
+        <td><%= link_to 'Destroy', beverage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Beverage', new_beverage_path %>
